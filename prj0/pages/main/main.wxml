@@ -1,0 +1,12 @@
+<!--pages/main/main.wxml-->
+<canvas canvas-id="myCanvas" style="border: 0px solid;"/>
+<view class='all' bindtap='tap_once'>
+  <view>
+    <view class='times'>{{num}}</view>
+    <view class='headline'>{{show}}</view>
+    <text class='info'>快速点击屏幕！</text>
+  </view>
+  <view class="timer">
+    <text>{{second}}s </text>
+  </view>
+</view>
