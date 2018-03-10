@@ -31,7 +31,7 @@ function countdown(that) {
   }
     , 1000)
 }
-var share=function() {
+var share = function () {
   Page.onShareAppMessage()
 }
 //timer
@@ -40,7 +40,7 @@ Page({
     //nothing happens
   },
 
-  onShareAppMessage (res) {
+  onShareAppMessage(res) {
     if (res.from === 'button') {
       // 来自页面内转发按钮
       console.log(res.target)
@@ -61,24 +61,66 @@ Page({
    * 页面的初始数据
    */
   data: {
-    title: ['点击屏幕即可开始', '大“手”子', '王の右手', '屏幕菌内牛满面', '孤独的你，有手为伴', '恭喜你打败了孤独的开发者'],
-    show: '点击屏幕即可开始',
+    title: ['点击方块即可开始', '大“手”子', '王の右手', '屏幕菌内牛满面', '孤独的你，有手为伴', '恭喜你打败了孤独的开发者'],
+    show: '点击方块即可开始',
     num: 0,
-    second: 15
+    second: 15,
+    x: 325,
+    y: 300,
+    color: '#7461F5',
   },
 
-  tap_once: function () {
+  start: function (e) {
+    this.setData({
+      color: '#858CD1'
+    })
+  },
+
+  tap: function (e) {
+    this.setData({
+      color: '#7461F5',
+      x: Math.random()*650,
+      y: Math.random()*1000
+    })
+  },
+
+  finaltap:function(e){
     if (this.data.second == 0) {
       wx.showModal({
         title: '游戏结束！',
-        content: '你在“手速测试”经典关卡获得了称号“' + this.data.show + '”，手速高达' + this.data.num * 4 + '次每分钟！',
+        content: '你在“手速测试”困难关卡获得了称号“' + this.data.show + '”，手速高达' + this.data.num * 4 + '次每分钟！',
         confirmText: '再来一盘',
         cancelText: '返回',
         success: function (res) {
           if (res.confirm) {
             console.log('用户点击确定')
             wx.reLaunch({
-              url: '../main/main',
+              url: '../main2/main2',
+            })
+          } else if (res.cancel) {
+            console.log('用户点击取消')
+            wx.reLaunch({
+              url: '../index/index',
+            })
+          }
+        }
+      })
+      return
+    }
+  },
+
+  end: function () {
+    if (this.data.second == 0) {
+      wx.showModal({
+        title: '游戏结束！',
+        content: '你在“手速测试”困难关卡获得了称号“' + this.data.show + '”，手速高达'+this.data.num*4+'次每分钟！',
+        confirmText: '再来一盘',
+        cancelText: '返回',
+        success: function (res) {
+          if (res.confirm) {
+            console.log('用户点击确定')
+            wx.reLaunch({
+              url: '../main2/main2',
             })
           } else if (res.cancel) {
             console.log('用户点击取消')
@@ -119,6 +161,7 @@ Page({
     this.setData({
       num: this.data.num + 1
     })
+    //
   },
 
   /**
@@ -138,7 +181,15 @@ Page({
       d_or_n = 1;
     }*/
     //判断时间，弃用
-
+    /*const ctx = wx.createCanvasContext('myCanvas')
+    ctx.rect(10, 10, 5, 5)
+    ctx.setFillStyle('red')
+    ctx.clip()
+    ctx.fill()
+    ctx.rect(80, 80, 5, 5)
+    ctx.setFillStyle('red')
+    ctx.fill()
+    ctx.draw()*/
   },
 
   /**

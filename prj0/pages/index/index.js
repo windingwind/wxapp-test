@@ -24,6 +24,12 @@ Page({
     })
   },
   //指向main页面
+  change_to_main2: function () {
+    wx.navigateTo({
+      url: '../main2/main2',
+    })
+  },
+  //指向main2页面
   onLoad: function () {
     if (app.globalData.userInfo) {
       this.setData({

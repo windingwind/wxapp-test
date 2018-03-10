@@ -26,8 +26,15 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 0,
+			"list": [
+				{
+					"id": -1,
+					"name": "setting1",
+					"pathName": "pages/main2/main2",
+					"query": ""
+				}
+			]
 		}
 	}
 }

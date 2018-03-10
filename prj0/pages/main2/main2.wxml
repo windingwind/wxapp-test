@@ -1,0 +1,14 @@
+<!--pages/main2/main2.wxml-->
+<view class='all' bindtap='finaltap'>
+
+  <view>
+    <view class='times'>{{num}}</view>
+    <view class='headline'>{{show}}</view>
+    <text class='info'>快速点击方块</text>
+  </view>
+  <view class="timer">
+    <text>{{second}}s </text>
+  </view>
+  <view id='tap' style="position:absolute;width:100rpx;height:100rpx; top:{{y}}rpx; left:{{x}}rpx; background-color:{{color}}" bindtouchstart='start' bindtouchend='end' bindtap='tap'>
+  </view>
+</view>
