@@ -1,0 +1,25 @@
+<view class='all'>
+  <view class='name'>
+    <text>{{name}}</text>
+  </view>
+
+  <view class='page'>
+    <view class='input'>
+      <view class='text'>账号</view>
+      <input class='inbox'>
+      </input>
+    </view>
+    <view class='input'>
+      <view class='text'>密码</view>
+      <input class='inbox'>
+      </input>
+    </view>
+    <button class='bt'>登录</button>
+    <text>注册</text>
+    <view class='wxlg' catchtap='wxlogin'>
+      <image class='img'></image>
+      <text>微信登录</text>
+    </view>
+  </view>
+
+</view>

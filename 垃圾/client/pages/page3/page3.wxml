@@ -1,0 +1,18 @@
+<view class='all'>
+  <view class='page'>
+    <view class='select_city'>
+      <text class='city_text'>{{city}}</text>
+      <button class='bt' catchtap='select_city'>
+      </button>
+    </view>
+    <view class='map_v'>
+      <map class='map'>
+      </map>
+    </view>
+    <view class='info'>
+      <text class='map_info'>{{map_info.str1+'\n'+map_info.str2}}</text>
+      <button class='set_position' catchtap='set_position'>set_position</button>
+    </view>
+  </view>
+
+</view>

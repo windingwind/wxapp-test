@@ -1,0 +1,67 @@
+/* pages/page2/page2.wxss */
+
+.all {
+  position:absolute;
+  width: 100%;
+  height: 100%;
+  background-color: red;
+}
+
+.page {
+  position: absolute;
+  top: 0px;
+  height: 30%;
+  width: 100%;
+  background-color: gold;
+  align-items: center;
+}
+
+.head {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.inpt {
+  position: relative;
+  width: 500rpx;
+  height: 100rpx;
+  top: 100rpx;
+  border: 2rpx solid red;
+  /* background-color: rebeccapurple; */
+}
+
+.search {
+  position: absolute;
+  right: 125rpx;
+  /* top: 100rpx; */
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.photo {
+  position: absolute;
+  right: 0rpx;
+  /* top: 100rpx; */
+  width: 100rpx;
+  height: 100rpx;
+}
+
+.scroll {
+  position: absolute;
+  width: 100%;
+  height: 70%;
+  bottom: 0px;
+  background-color: gainsboro;
+  /* padding: 5%; */
+}
+
+.list {
+  width: 730rpx;
+  height: 200rpx;
+  /* padding-left: 5%;
+  padding-right: 5%; */
+  margin-top: 10rpx;
+  margin-bottom: 10rpx; 
+  border: green solid 10rpx;
+}
