@@ -1,0 +1,16 @@
+<view class='all'>
+  <view class='page'>
+    <view>
+      <form class='head'>
+        <input class='inpt'></input>
+        <!-- <view class='search'>s</view>
+        <view class='photo'>p</view> -->
+        <button class='search'>search</button>
+        <button class='photo'>photo</button>
+      </form>
+    </view>
+  </view>
+  <scroll-view class='scroll' scroll-y='true'>
+    <view class='list' catchtap='test' wx:for="{{times}}">{{str[times]}}</view>
+  </scroll-view>
+</view>
